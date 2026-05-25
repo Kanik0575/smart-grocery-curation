@@ -10,7 +10,7 @@ from catalog import get_catalog_json
 
 def call_gemini(api_key: str, prompt: str, max_tokens: int = 2000) -> str:
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-1.5-flash-latest")
+    model = genai.GenerativeModel("gemini-1.5-flash")
     response = model.generate_content(prompt)
     return response.text.strip()
 
