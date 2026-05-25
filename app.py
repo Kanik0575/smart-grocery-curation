@@ -185,14 +185,14 @@ st.markdown("""
 # ─── Sidebar ──────────────────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("## 🌿 Smart Grocery Curator")
-    st.markdown("*Powered by Claude API*")
+    st.markdown("*Powered by Gemini API*")
     st.divider()
     
     api_key = st.text_input(
-        "Anthropic API Key",
+        "Gemini API Key",
         type="password",
-        help="Get your key at console.anthropic.com",
-        placeholder="sk-ant-..."
+        help="Get your free key at aistudio.google.com",
+        placeholder="AIza...."
     )
     
     st.divider()
@@ -284,8 +284,8 @@ if generate_btn:
         st.error("Please enter your Anthropic API key in the sidebar.")
         st.stop()
     
-    if not api_key.startswith("sk-ant"):
-        st.error("Please enter a valid Anthropic API key (starts with sk-ant-...).")
+    if not api_key.startswith("AIza...
+        st.error("Please enter a valid Anthropic API key (starts with AIza....).")
         st.stop()
     
     user_profile = {
