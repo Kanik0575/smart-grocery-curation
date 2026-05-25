@@ -91,7 +91,7 @@ CATALOG_STATS = {
 
 # ─── Gemini API Call ──────────────────────────────────────────
 def call_gemini(api_key, prompt):
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent?key={api_key}"
     payload = {"contents": [{"parts": [{"text": prompt}]}], "generationConfig": {"temperature": 0.7, "maxOutputTokens": 4000}}
     r = requests.post(url, json=payload, timeout=60)
     if r.status_code != 200:
