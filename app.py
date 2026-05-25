@@ -281,11 +281,11 @@ st.divider()
 # ─── Generation ───────────────────────────────────────────────────────────────
 if generate_btn:
     if not api_key:
-        st.error("Please enter your Anthropic API key in the sidebar.")
+        st.error("Please enter your Gemini API key in the sidebar.")
         st.stop()
     
-    if not api_key.startswith("AIza...
-        st.error("Please enter a valid Anthropic API key (starts with AIza....).")
+    if len(api_key) < 10:
+        st.error("Please enter a valid Gemini API key.")
         st.stop()
     
     user_profile = {
