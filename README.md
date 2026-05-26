@@ -16,20 +16,17 @@ The problem it solves is exactly what FirstClub faces: a new user with specific 
 
 ## Screenshots
 
-### Main Dashboard — Persona Card + Curated Basket
-<p align="center">
-  <img src="screenshots/screenshot_main.png" alt="Main Dashboard" width="100%"/>
-</p>
+### Persona Classification + 3-Stage Pipeline
+![Persona Card](1_persona.png)
+
+### Basket Insights + Curated Product Cards
+![Basket Insights](2_insights.png)
+
+### Meal-Grouped Products with Quality Tags
+![Product Cards](3_products.png)
 
 ### 7-Day Meal Plan + Smart Substitutions
-<p align="center">
-  <img src="screenshots/screenshot_mealplan.png" alt="Meal Plan and Substitutions" width="100%"/>
-</p>
-
-### 3-Stage AI Prompt Chain Architecture
-<p align="center">
-  <img src="screenshots/screenshot_architecture.png" alt="Architecture Diagram" width="100%"/>
-</p>
+![Meal Plan](4_mealplan.png)
 
 ---
 
@@ -74,7 +71,7 @@ User Profile (diet, household, trust signals, health goals, budget)
 
 **175+ real premium SKUs** — 8 categories: Fruits & Veg, Dairy & Eggs, Bakery, Pantry Staples, Snacks & Beverages, Health & Wellness, Home & Kitchen, Kids & Family. Every product has quality labels matching real clean-label attributes (organic, pesticide-free, hormone-free, A2-protein, cold-pressed, probiotic, superfood).
 
-**Persona classification** — The same catalog produces completely different baskets for a vegan fitness enthusiast vs. a family with kids vs. a keto follower. The Classifier stage is what makes this possible — it outputs an archetype like "The Conscious Nourisher" or "The Macro Optimizer" that drives everything downstream.
+**Persona classification** — The same catalog produces completely different baskets for a vegan fitness enthusiast vs. a family with kids vs. a keto follower. The Classifier stage outputs an archetype like "The Conscious Nourisher" or "The Macro Optimizer" that drives everything downstream.
 
 **Meal occasion grouping** — Products aren't just listed. They're grouped into Breakfast Essentials, Lunch & Dinner Mains, Smart Snacking, Pantry Power-Ups, Wellness & Recovery, and Home & Sustainability.
 
@@ -112,10 +109,10 @@ smart-grocery-curation/
 ├── app.py              # Everything — UI, 175+ SKU catalog, AI pipeline, demo engine
 ├── requirements.txt    # streamlit, requests, pandas
 ├── README.md
-└── screenshots/
-    ├── screenshot_main.png
-    ├── screenshot_mealplan.png
-    └── screenshot_architecture.png
+├── 1_persona.png       # Screenshot — persona + pipeline stages
+├── 2_insights.png      # Screenshot — basket insights + breakfast products
+├── 3_products.png      # Screenshot — lunch, dinner, pantry product cards
+└── 4_mealplan.png      # Screenshot — meal plan + smart substitutions
 ```
 
 Single-file architecture — no import errors, no module issues, deploys cleanly on Streamlit Community Cloud.
